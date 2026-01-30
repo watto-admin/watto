@@ -37,6 +37,24 @@ export default function ScrollImageSequence() {
   const y2 = useTransform(scrollYProgress, [0.45, 0.7], [50, -50]);
   const y3 = useTransform(scrollYProgress, [0.75, 0.9], [50, 0]);
 
+  // Mobile specific Y transforms (Fade in from bottom, fade out below)
+  // Maps opacity peak range to Y: Starts low, moves to center (0), moves back low
+  const mobileY1 = useTransform(
+    scrollYProgress,
+    [0.1, 0.225, 0.35],
+    [50, -100, 50],
+  );
+  const mobileY2 = useTransform(
+    scrollYProgress,
+    [0.375, 0.5, 0.625],
+    [50, -100, 50],
+  );
+  const mobileY3 = useTransform(
+    scrollYProgress,
+    [0.65, 0.775, 0.9],
+    [50, -100, 50],
+  );
+
   useEffect(() => {
     const loadedImages: HTMLImageElement[] = [];
     let loadedCount = 0;
@@ -148,10 +166,10 @@ export default function ScrollImageSequence() {
           </div>
         )}
 
-        {/* Overlay Text */}
+        {/* Overlay Text - Desktop */}
         <motion.div
           style={{ opacity: opacity1, y: y1 }}
-          className="pointer-events-none absolute inset-0 flex items-center justify-start z-10 px-4 md:px-20"
+          className="pointer-events-none absolute inset-0 hidden md:flex items-center justify-start z-10 px-4 md:px-20"
         >
           <h1 className="text-4xl md:text-6xl font-normal text-white drop-shadow-2xl">
             The Un-Skippable
@@ -162,7 +180,7 @@ export default function ScrollImageSequence() {
 
         <motion.div
           style={{ opacity: opacity2, y: y2 }}
-          className="pointer-events-none absolute inset-0 flex items-center justify-end z-10 px-4 md:px-20"
+          className="pointer-events-none absolute inset-0 hidden md:flex items-center justify-end z-10 px-4 md:px-20"
         >
           <h2 className="text-4xl md:text-6xl font-normal text-right text-white drop-shadow-2xl">
             Prime <br />
@@ -172,9 +190,41 @@ export default function ScrollImageSequence() {
 
         <motion.div
           style={{ opacity: opacity3, y: y3 }}
-          className="pointer-events-none absolute inset-0 flex items-center justify-start z-10 px-4 md:px-20"
+          className="pointer-events-none absolute inset-0 hidden md:flex items-center justify-start z-10 px-4 md:px-20"
         >
           <h2 className="text-4xl md:text-6xl font-normal text-white drop-shadow-2xl">
+            Data in every <br />
+            <span className="text-blue-500">Drop</span>
+          </h2>
+        </motion.div>
+
+        {/* Overlay Text - Mobile (Fade in from bottom, fade out below) */}
+        <motion.div
+          style={{ opacity: opacity1, y: mobileY1 }}
+          className="pointer-events-none absolute inset-0 flex md:hidden items-end justify-center z-10 pb-20 text-center"
+        >
+          <h1 className="text-4xl font-normal text-white drop-shadow-2xl">
+            The Un-Skippable
+            <br />
+            <span className="text-blue-500">Ad</span>
+          </h1>
+        </motion.div>
+
+        <motion.div
+          style={{ opacity: opacity2, y: mobileY2 }}
+          className="pointer-events-none absolute inset-0 flex md:hidden items-end justify-center z-10 pb-20 text-center"
+        >
+          <h2 className="text-4xl font-normal text-white drop-shadow-2xl">
+            Prime <br />
+            <span className="text-blue-500">Real Estate</span>
+          </h2>
+        </motion.div>
+
+        <motion.div
+          style={{ opacity: opacity3, y: mobileY3 }}
+          className="pointer-events-none absolute inset-0 flex md:hidden items-end justify-center z-10 pb-20 text-center"
+        >
+          <h2 className="text-4xl font-normal text-white drop-shadow-2xl">
             Data in every <br />
             <span className="text-blue-500">Drop</span>
           </h2>
