@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Comfortaa, Bungee, Anta } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
+import SmoothScrolling from "@/components/SmoothScrolling";
 import "./globals.css";
 
 const bungee = Bungee({
@@ -37,9 +38,11 @@ export default function RootLayout({
       <body
         className={`${bungee.variable} ${anta.variable} ${comfortaa.variable} antialiased bg-black text-white`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <SmoothScrolling>
+          <Navbar />
+          {children}
+          <Footer />
+        </SmoothScrolling>
       </body>
     </html>
   );

@@ -22,7 +22,7 @@ export default function ScrollImageSequence() {
   });
 
   // Transform scroll progress to frame index
-  const frameIndex = useTransform(scrollYProgress, [0, 1], [0, frameCount - 1]);
+  const frameIndex = useTransform(scrollYProgress, [0, 1], [0, frameCount]);
 
   // Text Opacity based on scroll
   const opacity1 = useTransform(scrollYProgress, [0.1, 0.225, 0.35], [0, 1, 0]);
@@ -42,17 +42,17 @@ export default function ScrollImageSequence() {
   const mobileY1 = useTransform(
     scrollYProgress,
     [0.1, 0.225, 0.35],
-    [50, -100, 50],
+    [50, -100, -150],
   );
   const mobileY2 = useTransform(
     scrollYProgress,
     [0.375, 0.5, 0.625],
-    [50, -100, 50],
+    [50, -100, -150],
   );
   const mobileY3 = useTransform(
     scrollYProgress,
     [0.65, 0.775, 0.9],
-    [50, -100, 50],
+    [50, -100, -150],
   );
 
   useEffect(() => {
@@ -155,7 +155,7 @@ export default function ScrollImageSequence() {
   }, [imagesLoaded, frameIndex, images]);
 
   return (
-    <div ref={ref} className="relative h-[150vh] md:h-[250vh] bg-black">
+    <div ref={ref} className="relative h-[400vh] md:h-[250vh] bg-black">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
         <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
