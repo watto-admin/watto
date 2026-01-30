@@ -17,8 +17,8 @@ export default function Navbar() {
       <motion.nav
         className={`pointer-events-auto flex items-center justify-between px-8 py-3 rounded-full border transition-all duration-300 ${
           isScrolled
-            ? "bg-black/30 backdrop-blur-xl border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.37)]"
-            : "bg-white/5 backdrop-blur-sm border-white/5"
+            ? "bg-black/30 backdrop-blur-xl border-white/10 shadow-[0_0_50px_10px_rgba(100,150,255,0.4)]"
+            : "bg-white/5 backdrop-blur-sm border-white/5 shadow-[0_0_20px_0_rgba(255,255,255,0.1)]"
         }`}
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}

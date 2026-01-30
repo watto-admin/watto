@@ -3,7 +3,7 @@ import { Tag, TrendingUp, Calendar, Hand, QrCode, Users } from "lucide-react";
 
 const LandingInfoOne = () => {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-24 bg-black text-white rounded-lg">
+    <section className="w-[95%] md:w-[80%] mx-auto mb-14 px-4 py-24 bg-black/30 backdrop-blur-xl border border-white/10 rounded-3xl shadow-[0_0_50px_10px_rgba(100,150,255,0.2)] text-white">
       {/* Header */}
       <div className="text-center mb-16 space-y-2">
         <h2 className="text-4xl md:text-5xl font-normal text-gray-400">

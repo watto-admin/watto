@@ -18,6 +18,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-monoton), cursive;
-  font-weight: 400; /* Monoton is a display font, usually doesn't need bold weight simulation */
+  font-family: var(--font-bungee), cursive;
+  font-weight: 400; /* bungee is a display font, usually doesn't need bold weight simulation */
 }
