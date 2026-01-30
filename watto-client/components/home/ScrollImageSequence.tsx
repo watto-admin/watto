@@ -83,19 +83,32 @@ export default function ScrollImageSequence() {
         canvas.height = window.innerHeight;
 
         // Calculate scale based on device width
-        let scale = Math.max(canvas.width / img.width, canvas.height / img.height);
+        let scale =
+          Math.max(canvas.width / img.width, canvas.height / img.height) * 0.85;
+        let yOffset = 0;
 
         // Mobile adjustment: 'cover' logic (matching height) can zoom in too much on portrait screens.
         // We relax the height constraint on mobile to allow the image to shrink/respond to width,
         // while still ensuring it covers the width.
+        if (canvas.width < 1168) {
+          scale = Math.max(
+            canvas.width / img.width,
+            (canvas.height / img.height) * 0.65,
+          );
+          yOffset = canvas.height * 0.08; // Move up by 10%
+        }
         if (canvas.width < 768) {
-          scale = Math.max(canvas.width / img.width, (canvas.height / img.height) * 0.6);
+          scale = Math.max(
+            canvas.width / img.width,
+            (canvas.height / img.height) * 0.55,
+          );
+          yOffset = canvas.height * 0.08; // Move up by 10%
         }
 
         const w = img.width * scale;
         const h = img.height * scale;
         const x = canvas.width / 2 - w / 2;
-        const y = canvas.height / 2 - h / 2;
+        const y = canvas.height / 2 - h / 2 - yOffset;
 
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.drawImage(img, x, y, w, h);
@@ -120,7 +133,7 @@ export default function ScrollImageSequence() {
   }, [imagesLoaded, frameIndex, images]);
 
   return (
-    <div ref={ref} className="relative h-[250vh] bg-black">
+    <div ref={ref} className="relative h-[150vh] md:h-[250vh] bg-black">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
         <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
@@ -134,31 +147,32 @@ export default function ScrollImageSequence() {
         {/* Overlay Text */}
         <motion.div
           style={{ opacity: opacity1, y: y1 }}
-          className="pointer-events-none absolute inset-0 flex items-center justify-start z-10 px-4 md:px-20"
+          className="pointer-events-none absolute inset-0 flex items-center justify-start z-10 px-4 md:px-40"
         >
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-white drop-shadow-2xl">
-            Left Side <br />
-            <span className="text-blue-500">Placeholder Text</span>
+          <h1 className="text-4xl md:text-6xl font-normal text-white drop-shadow-2xl">
+            The Un-Skippable
+            <br />
+            <span className="text-blue-500">Ad</span>
           </h1>
         </motion.div>
 
         <motion.div
           style={{ opacity: opacity2, y: y2 }}
-          className="pointer-events-none absolute inset-0 flex items-center justify-end z-10 px-4 md:px-20"
+          className="pointer-events-none absolute inset-0 flex items-center justify-end z-10 px-4 md:px-40"
         >
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-right text-white drop-shadow-2xl">
-            Right Side <br />
-            Placeholder Text
+          <h2 className="text-4xl md:text-6xl font-normal text-right text-white drop-shadow-2xl">
+            Prime <br />
+            <span className="text-blue-500">Real Estate</span>
           </h2>
         </motion.div>
 
         <motion.div
           style={{ opacity: opacity3, y: y3 }}
-          className="pointer-events-none absolute inset-0 flex items-center justify-start z-10 px-4 md:px-20"
+          className="pointer-events-none absolute inset-0 flex items-center justify-start z-10 px-4 md:px-40"
         >
-          <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white drop-shadow-2xl">
-            Final Left <br />
-            Placeholder
+          <h2 className="text-4xl md:text-6xl font-normal text-white drop-shadow-2xl">
+            Data in every <br />
+            <span className="text-blue-500">Drop</span>
           </h2>
         </motion.div>
       </div>

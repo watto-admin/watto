@@ -16,7 +16,7 @@ export default function FAQPage() {
   return (
     <main className="min-h-screen pt-32 pb-16 px-6 bg-neutral-950 text-white">
       <div className="max-w-3xl mx-auto">
-        <h1 className="text-4xl md:text-6xl font-bold mb-16 text-center tracking-tighter">Frequently Asked Questions</h1>
+        <h1 className="text-4xl md:text-6xl font-normal mb-16 text-center">Frequently Asked Questions</h1>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
             <div key={index} className="border-b border-white/10 pb-4">
@@ -26,7 +26,7 @@ export default function FAQPage() {
                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
               >
                 {faq.question}
-                <span className="ml-4 text-2xl font-light text-gray-500">{activeIndex === index ? '-' : '+'}</span>
+                <span className="ml-4 text-2xl font-normal text-gray-500">{activeIndex === index ? '-' : '+'}</span>
               </button>
               <AnimatePresence>
                 {activeIndex === index && (
