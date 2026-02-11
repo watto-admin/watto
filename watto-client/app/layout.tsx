@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
-import { Fredoka, Oswald, Anta } from "next/font/google";
+import { Fredoka, Titan_One, Noto_Serif } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import "./globals.css";
 
-const oswald = Oswald({
-  variable: "--font-oswald",
+const titanOne = Titan_One({
+  variable: "--font-titan-one",
   subsets: ["latin"],
   weight: "400",
 });
 
-const anta = Anta({
-  variable: "--font-anta",
+const notoSerif = Noto_Serif({
+  variable: "--font-noto-serif",
   subsets: ["latin"],
-  weight: "400",
 });
 
 const fredoka = Fredoka({
@@ -36,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${oswald.variable} ${anta.variable} ${fredoka.variable} antialiased bg-black text-white`}
+        className={`${titanOne.variable} ${notoSerif.variable} ${fredoka.variable} antialiased bg-black text-white`}
       >
         <SmoothScrolling>
           <Navbar />
