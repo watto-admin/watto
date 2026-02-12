@@ -1,9 +1,27 @@
 import ContactFormSection from "@/components/contact/ContactFormSection";
+import LightRays from "@/components/LightRays";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen pt-32 pb-16 px-6 bg-black text-white flex flex-col items-center">
-      <div className="max-w-3xl w-full">
+    <main className="min-h-screen pt-32 pb-16 px-6 bg-black text-white flex flex-col items-center relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#ffffff"
+          raysSpeed={2}
+          lightSpread={0.5}
+          rayLength={3}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0}
+          distortion={0}
+          className="opacity-90"
+          pulsating={false}
+          fadeDistance={1}
+          saturation={1}
+        />
+      </div>
+      <div className="max-w-3xl w-full relative z-10">
         <h1 className="text-4xl md:text-6xl font-normal mb-8 pt-24 text-center">
           Get in Touch
         </h1>
