@@ -7,13 +7,13 @@ export default function Footer() {
       {/* Marquee Banner */}
       <div className="w-full overflow-hidden bg-transparent py-6 border border-black">
         <div className="animate-marquee whitespace-nowrap">
-          <span className="text-4xl font-black font-[family-name:var(--font-fredoka)] text-white/30 mx-4">
-            watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧
-            watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧
+          <span className="text-4xl font-black font-[family-name:var(--font-unbounded)] text-white/70 mx-2">
+            ✧ WATER ADVERTISING THROUGH TAGETED OUTREACH ✧ WATER ADVERTISING
+            THROUGH TAGETED OUTREACH
           </span>
-          <span className="text-4xl font-black font-[family-name:var(--font-fredoka)] text-white/30 mx-4">
-            watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧
-            watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧ watto ✧
+          <span className="text-4xl font-black font-[family-name:var(--font-unbounded)] text-white/70 mx-2">
+            ✧ WATER ADVERTISING THROUGH TAGETED OUTREACH ✧ WATER ADVERTISING
+            THROUGH TAGETED OUTREACH
           </span>
         </div>
       </div>

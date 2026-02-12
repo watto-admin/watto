@@ -15,13 +15,15 @@ export default function LandingStatsInfo() {
           <Counter
             value={124991}
             places={[100000, 10000, 1000, 100, 10, 1]}
-            fontSize={50}
-            padding={5}
+            fontSize={40}
+            padding={20}
             gap={3}
             textColor="black"
             fontWeight={900}
             gradientFrom="gray-200"
             gradientTo="transparent"
+            counterStyle={{ fontFamily: "var(--font-unbounded)" }}
+            digitStyle={{ transform: "scaleY(1.6)", transformOrigin: "center" }}
           />
         </div>
 
@@ -33,13 +35,15 @@ export default function LandingStatsInfo() {
           <Counter
             value={52430}
             places={[10000, 1000, 100, 10, 1]}
-            fontSize={50}
-            padding={5}
+            fontSize={40}
+            padding={20}
             gap={3}
             textColor="black"
             fontWeight={900}
             gradientFrom="gray-200"
             gradientTo="transparent"
+            counterStyle={{ fontFamily: "var(--font-unbounded)" }}
+            digitStyle={{ transform: "scaleY(1.6)", transformOrigin: "center" }}
           />
         </div>
 
@@ -51,13 +55,15 @@ export default function LandingStatsInfo() {
           <Counter
             value={35}
             places={[10, 1]}
-            fontSize={50}
-            padding={5}
+            fontSize={40}
+            padding={20}
             gap={3}
             textColor="black"
             fontWeight={900}
             gradientFrom="gray-200"
             gradientTo="transparent"
+            counterStyle={{ fontFamily: "var(--font-unbounded)" }}
+            digitStyle={{ transform: "scaleY(1.6)", transformOrigin: "center" }}
           />
         </div>
 
@@ -69,13 +75,15 @@ export default function LandingStatsInfo() {
           <Counter
             value={8500}
             places={[1000, 100, 10, 1]}
-            fontSize={50}
-            padding={5}
+            fontSize={40}
+            padding={20}
             gap={3}
             textColor="black"
             fontWeight={900}
             gradientFrom="gray-200"
             gradientTo="transparent"
+            counterStyle={{ fontFamily: "var(--font-unbounded)" }}
+            digitStyle={{ transform: "scaleY(1.6)", transformOrigin: "center" }}
           />
         </div>
       </div>

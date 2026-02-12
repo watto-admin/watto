@@ -31,7 +31,7 @@ export default function Navbar() {
         >
           watto
         </Link>
-        <div className="flex gap-3 md:gap-8 text-sm md:text-base font-bold text-gray-200/90">
+        <div className="flex gap-3 font-light font-[family-name:var(--font-unbounded)] md:gap-12 text-xs md:text-base font-bold text-gray-200/90 gap-6">
           <Link
             href="/about"
             className="hover:text-white hover:scale-105 transition-all duration-200"

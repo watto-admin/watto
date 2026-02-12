@@ -44,8 +44,8 @@ The main application source code resides in the `watto-client` directory.
   - [Framer Motion](https://www.framer.com/motion/) (Declarative animations)
   - [Motion](https://motion.dev/) (Animation primitives)
 - **Scrolling:** [Lenis](https://github.com/darkroomengineering/lenis) (Smooth scroll)
-- **Icons:** [Lucide React](https://lucide.dev/)
-- **Fonts:** [Google Fonts](https://fonts.google.com/) (Titan One, Noto Serif, Fredoka)
+- **Icons:** [Lucide React](https://lucide.dev/)I
+- **Fonts:** [Google Fonts](https://fonts.google.com/) (Unbounded, Geist, Fredoka)
 
 ## ✨ Key Features
 

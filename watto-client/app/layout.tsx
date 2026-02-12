@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
-import { Fredoka, Titan_One, Noto_Serif } from "next/font/google";
+import { Fredoka, Unbounded, Geist } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import "./globals.css";
 
-const titanOne = Titan_One({
-  variable: "--font-titan-one",
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
   subsets: ["latin"],
-  weight: "400",
 });
 
-const notoSerif = Noto_Serif({
-  variable: "--font-noto-serif",
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin"],
 });
 
@@ -35,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${titanOne.variable} ${notoSerif.variable} ${fredoka.variable} antialiased bg-black text-white`}
+        className={`${unbounded.variable} ${geist.variable} ${fredoka.variable} antialiased bg-black text-white`}
       >
         <SmoothScrolling>
           <Navbar />

@@ -1,18 +1,36 @@
 import CircularText from "@/components/CircularText";
+import LightRays from "@/components/LightRays";
 
 export default function AboutPage() {
   return (
     <main className="min-h-screen pt-32 pb-16 px-6 bg-black text-white">
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+        <LightRays
+          raysOrigin="top-center"
+          raysColor="#ffffff"
+          raysSpeed={2}
+          lightSpread={0.5}
+          rayLength={3}
+          followMouse={true}
+          mouseInfluence={0.1}
+          noiseAmount={0}
+          distortion={0}
+          className="opacity-90"
+          pulsating={false}
+          fadeDistance={1}
+          saturation={1}
+        />
+      </div>
       <div className="max-w-4xl mx-auto text-center">
         <div className="relative flex items-center justify-center mb-12">
           <CircularText
             text="WATTO*WATTO*WATTO*"
             spinDuration={20}
             onHover="speedUp"
-            className="absolute w-[200px] h-[200px] justify-center items-center md:w-[300px] md:h-[300px]"
+            className="absolute w-[300px] h-[300px] justify-center items-center md:w-[400px] md:h-[400px]"
           />
           <h1 className="text-4xl md:text-6xl font-normal absolute z-10">
-            About
+            About Us
           </h1>
         </div>
         <div className="prose prose-invert prose-lg mx-auto">

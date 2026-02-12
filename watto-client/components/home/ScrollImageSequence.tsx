@@ -31,12 +31,12 @@ export default function ScrollImageSequence() {
   const desktopY1 = useTransform(scrollYProgress, [0.1, 0.2], [50, 0]);
 
   // Text 2 (Right, Center)
-  const desktopOpacity2 = useTransform(scrollYProgress, [0.25, 0.35], [0, 1]);
-  const desktopY2 = useTransform(scrollYProgress, [0.25, 0.35], [50, 0]);
+  const desktopOpacity2 = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
+  const desktopY2 = useTransform(scrollYProgress, [0.2, 0.3], [50, 0]);
 
   // Text 3 (Left, Bottom)
-  const desktopOpacity3 = useTransform(scrollYProgress, [0.4, 0.5], [0, 1]);
-  const desktopY3 = useTransform(scrollYProgress, [0.4, 0.5], [50, 0]);
+  const desktopOpacity3 = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
+  const desktopY3 = useTransform(scrollYProgress, [0.3, 0.4], [50, 0]);
   // --- MOBILE ANIMATIONS ---
   // Text 1 (Top)
   const mobileOpacity1 = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
@@ -205,7 +205,7 @@ export default function ScrollImageSequence() {
           >
             The Un-Skippable
             <br />
-            <span className="text-blue-500">Ad</span>
+            <span className="text-sky-500">Ad</span>
           </h1>
         </motion.div>
 
@@ -218,7 +218,7 @@ export default function ScrollImageSequence() {
             style={textStyle3D}
           >
             Prime <br />
-            <span className="text-blue-500">Real Estate</span>
+            <span className="text-sky-500">Real Estate</span>
           </h2>
         </motion.div>
 
@@ -231,7 +231,7 @@ export default function ScrollImageSequence() {
             style={textStyle3D}
           >
             Data in every <br />
-            <span className="text-blue-500">Drop</span>
+            <span className="text-sky-500">Drop</span>
           </h2>
         </motion.div>
 
@@ -243,7 +243,7 @@ export default function ScrollImageSequence() {
           <h1 className="text-4xl font-normal text-white" style={textStyle3D}>
             The Un-Skippable
             <br />
-            <span className="text-blue-500">Ad</span>
+            <span className="text-sky-500">Ad</span>
           </h1>
         </motion.div>
 
@@ -253,7 +253,7 @@ export default function ScrollImageSequence() {
         >
           <h2 className="text-4xl font-normal text-white" style={textStyle3D}>
             Prime <br />
-            <span className="text-blue-500">Real Estate</span>
+            <span className="text-sky-500">Real Estate</span>
           </h2>
         </motion.div>
 
@@ -263,7 +263,7 @@ export default function ScrollImageSequence() {
         >
           <h2 className="text-4xl font-normal text-white" style={textStyle3D}>
             Data in every <br />
-            <span className="text-blue-500">Drop</span>
+            <span className="text-sky-500">Drop</span>
           </h2>
         </motion.div>
       </div>
