@@ -69,6 +69,10 @@ watto/
 └── ...                    # Project root assets
 ```
 
+## 📚 Documentation
+
+- [Contact Form Implementation Guide](docs/CONTACT_FORM_IMPLEMENTATION.md) - Detailed architecture, flows, and setup for the contact system.
+
 ## 🎨 Design Assets
 
 The `public` folder contains key assets including:

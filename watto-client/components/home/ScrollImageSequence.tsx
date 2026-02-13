@@ -27,28 +27,28 @@ export default function ScrollImageSequence() {
 
   // --- DESKTOP ANIMATIONS ---
   // Text 1 (Left, Top)
-  const desktopOpacity1 = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
-  const desktopY1 = useTransform(scrollYProgress, [0.1, 0.2], [50, 0]);
+  const desktopOpacity1 = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
+  const desktopY1 = useTransform(scrollYProgress, [0.0, 0.05], [50, 0]);
 
   // Text 2 (Right, Center)
-  const desktopOpacity2 = useTransform(scrollYProgress, [0.2, 0.3], [0, 1]);
-  const desktopY2 = useTransform(scrollYProgress, [0.2, 0.3], [50, 0]);
+  const desktopOpacity2 = useTransform(scrollYProgress, [0.1, 0.15], [0, 1]);
+  const desktopY2 = useTransform(scrollYProgress, [0.1, 0.15], [50, 0]);
 
   // Text 3 (Left, Bottom)
-  const desktopOpacity3 = useTransform(scrollYProgress, [0.3, 0.4], [0, 1]);
-  const desktopY3 = useTransform(scrollYProgress, [0.3, 0.4], [50, 0]);
+  const desktopOpacity3 = useTransform(scrollYProgress, [0.2, 0.25], [0, 1]);
+  const desktopY3 = useTransform(scrollYProgress, [0.2, 0.25], [50, 0]);
   // --- MOBILE ANIMATIONS ---
   // Text 1 (Top)
-  const mobileOpacity1 = useTransform(scrollYProgress, [0.1, 0.2], [0, 1]);
-  const mobileY1 = useTransform(scrollYProgress, [0.1, 0.2], [30, 0]);
+  const mobileOpacity1 = useTransform(scrollYProgress, [0, 0.05], [0, 1]);
+  const mobileY1 = useTransform(scrollYProgress, [0.0, 0.05], [50, 0]);
 
   // Text 2 (Center)
-  const mobileOpacity2 = useTransform(scrollYProgress, [0.25, 0.35], [0, 1]);
-  const mobileY2 = useTransform(scrollYProgress, [0.25, 0.35], [30, 0]);
+  const mobileOpacity2 = useTransform(scrollYProgress, [0.06, 0.1], [0, 1]);
+  const mobileY2 = useTransform(scrollYProgress, [0.06, 0.1], [50, 0]);
 
   // Text 3 (Bottom)
-  const mobileOpacity3 = useTransform(scrollYProgress, [0.4, 0.5], [0, 1]);
-  const mobileY3 = useTransform(scrollYProgress, [0.4, 0.5], [30, 0]);
+  const mobileOpacity3 = useTransform(scrollYProgress, [0.11, 0.16], [0, 1]);
+  const mobileY3 = useTransform(scrollYProgress, [0.11, 0.16], [5, 0]);
 
   const textStyle3D = {
     textShadow:
@@ -177,7 +177,7 @@ export default function ScrollImageSequence() {
   }, [frameIndex]); // Removed images/loaded dependencies to avoid re-binding loop
 
   return (
-    <div ref={ref} className="relative h-[375vh] md:h-[250vh] bg-black">
+    <div ref={ref} className="relative h-[175vh] md:h-[150vh] bg-black">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
         <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
