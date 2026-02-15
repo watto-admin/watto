@@ -25,35 +25,35 @@ export default function ScrollImageSequence() {
   // Transform scroll progress to frame index
   const frameIndex = useTransform(scrollYProgress, [0, 1], [0, frameCount - 1]);
 
-  // Text Opacity based on scroll
-  const opacity1 = useTransform(scrollYProgress, [0.1, 0.225, 0.35], [0, 1, 0]);
-  const opacity2 = useTransform(
-    scrollYProgress,
-    [0.375, 0.5, 0.625],
-    [0, 1, 0],
-  );
-  const opacity3 = useTransform(scrollYProgress, [0.65, 0.775, 0.9], [0, 1, 0]);
+  // --- DESKTOP ANIMATIONS ---
+  // Text 1 (Left, Top)
+  const desktopOpacity1 = useTransform(scrollYProgress, [0.08, 0.2], [0, 1]);
+  const desktopY1 = useTransform(scrollYProgress, [0.08, 0.2], [50, 0]);
 
-  const y1 = useTransform(scrollYProgress, [0.1, 0.35], [50, -50]);
-  const y2 = useTransform(scrollYProgress, [0.45, 0.7], [50, -50]);
-  const y3 = useTransform(scrollYProgress, [0.75, 0.9], [50, 0]);
+  // Text 2 (Right, Center)
+  const desktopOpacity2 = useTransform(scrollYProgress, [0.09, 0.21], [0, 1]);
+  const desktopY2 = useTransform(scrollYProgress, [0.09, 0.21], [50, 0]);
 
-  // Mobile specific Y transforms (Fade in from bottom, fade out below)
-  const mobileY1 = useTransform(
-    scrollYProgress,
-    [0.1, 0.225, 0.35],
-    [50, -100, -300],
-  );
-  const mobileY2 = useTransform(
-    scrollYProgress,
-    [0.375, 0.5, 0.625],
-    [50, -100, -300],
-  );
-  const mobileY3 = useTransform(
-    scrollYProgress,
-    [0.65, 0.775, 0.9],
-    [50, -100, -300],
-  );
+  // Text 3 (Left, Bottom)
+  const desktopOpacity3 = useTransform(scrollYProgress, [0.1, 0.22], [0, 1]);
+  const desktopY3 = useTransform(scrollYProgress, [0.1, 0.22], [50, 0]);
+  // --- MOBILE ANIMATIONS ---
+  // Text 1 (Top)
+  const mobileOpacity1 = useTransform(scrollYProgress, [0.08, 0.2], [0, 1]);
+  const mobileY1 = useTransform(scrollYProgress, [0.08, 0.2], [50, 0]);
+
+  // Text 2 (Center)
+  const mobileOpacity2 = useTransform(scrollYProgress, [0.09, 0.21], [0, 1]);
+  const mobileY2 = useTransform(scrollYProgress, [0.09, 0.21], [50, 0]);
+
+  // Text 3 (Bottom)
+  const mobileOpacity3 = useTransform(scrollYProgress, [0.1, 0.22], [0, 1]);
+  const mobileY3 = useTransform(scrollYProgress, [0.1, 0.22], [5, 0]);
+
+  const textStyle3D = {
+    textShadow:
+      "0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15)",
+  };
 
   useEffect(() => {
     // Initialize images array
@@ -177,7 +177,7 @@ export default function ScrollImageSequence() {
   }, [frameIndex]); // Removed images/loaded dependencies to avoid re-binding loop
 
   return (
-    <div ref={ref} className="relative h-[375vh] md:h-[250vh] bg-black">
+    <div ref={ref} className="relative h-[225vh] md:h-[180vh] bg-black">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex items-center justify-center">
         <canvas ref={canvasRef} className="absolute inset-0 z-0" />
 
@@ -196,65 +196,74 @@ export default function ScrollImageSequence() {
 
         {/* Overlay Text - Desktop */}
         <motion.div
-          style={{ opacity: opacity1, y: y1 }}
-          className="pointer-events-none absolute inset-0 hidden md:flex items-center justify-start z-10 px-4 md:px-20"
+          style={{ opacity: desktopOpacity1, y: desktopY1 }}
+          className="pointer-events-none absolute inset-0 hidden md:flex items-start pt-52 justify-start z-10 px-40 md:px-40"
         >
-          <h1 className="text-4xl md:text-6xl font-normal text-white drop-shadow-2xl">
+          <h1
+            className="text-4xl md:text-6xl font-normal text-white"
+            style={textStyle3D}
+          >
             The Un-Skippable
             <br />
-            <span className="text-blue-500">Ad</span>
+            <span className="text-sky-500">Ad</span>
           </h1>
         </motion.div>
 
         <motion.div
-          style={{ opacity: opacity2, y: y2 }}
-          className="pointer-events-none absolute inset-0 hidden md:flex items-center justify-end z-10 px-4 md:px-20"
+          style={{ opacity: desktopOpacity2, y: desktopY2 }}
+          className="pointer-events-none absolute inset-0 hidden md:flex items-center justify-end z-10 px-40 md:px-40"
         >
-          <h2 className="text-4xl md:text-6xl font-normal text-right text-white drop-shadow-2xl">
+          <h2
+            className="text-4xl md:text-6xl font-normal text-right text-white"
+            style={textStyle3D}
+          >
             Prime <br />
-            <span className="text-blue-500">Real Estate</span>
+            <span className="text-sky-500">Real Estate</span>
           </h2>
         </motion.div>
 
         <motion.div
-          style={{ opacity: opacity3, y: y3 }}
-          className="pointer-events-none absolute inset-0 hidden md:flex items-center justify-start z-10 px-4 md:px-20"
+          style={{ opacity: desktopOpacity3, y: desktopY3 }}
+          className="pointer-events-none absolute inset-0 hidden md:flex items-end pb-32 justify-start z-10 px-40 md:px-40"
         >
-          <h2 className="text-4xl md:text-6xl font-normal text-white drop-shadow-2xl">
+          <h2
+            className="text-4xl md:text-6xl font-normal text-white"
+            style={textStyle3D}
+          >
             Data in every <br />
-            <span className="text-blue-500">Drop</span>
+            <span className="text-sky-500">Drop</span>
           </h2>
         </motion.div>
 
         {/* Overlay Text - Mobile (Fade in from bottom, fade out below) */}
         <motion.div
-          style={{ opacity: opacity1, y: mobileY1 }}
-          className="pointer-events-none absolute inset-0 flex md:hidden items-end justify-center z-10 pb-20 text-center"
+          style={{ opacity: mobileOpacity1, y: mobileY1 }}
+          className="pointer-events-none absolute inset-0 flex md:hidden items-start justify-center z-10 pt-30 text-center"
         >
-          <h1 className="text-4xl font-normal text-white drop-shadow-2xl">
+          <h1 className="text-4xl font-normal text-white" style={textStyle3D}>
             The Un-Skippable
             <br />
-            <span className="text-blue-500">Ad</span>
+            <span className="text-sky-500">Ad</span>
           </h1>
         </motion.div>
 
         <motion.div
-          style={{ opacity: opacity2, y: mobileY2 }}
-          className="pointer-events-none absolute inset-0 flex md:hidden items-end justify-center z-10 pb-20 text-center"
+          style={{ opacity: mobileOpacity2, y: mobileY2 }}
+          className="pointer-events-none absolute inset-0 flex md:hidden items-end justify-center z-10 pb-70 text-center"
         >
-          <h2 className="text-4xl font-normal text-white drop-shadow-2xl">
+          <h2 className="text-4xl font-normal text-white" style={textStyle3D}>
             Prime <br />
-            <span className="text-blue-500">Real Estate</span>
+            <span className="text-sky-500">Real Estate</span>
           </h2>
         </motion.div>
 
         <motion.div
-          style={{ opacity: opacity3, y: mobileY3 }}
-          className="pointer-events-none absolute inset-0 flex md:hidden items-end justify-center z-10 pb-20 text-center"
+          style={{ opacity: mobileOpacity3, y: mobileY3 }}
+          className="pointer-events-none absolute inset-0 flex md:hidden items-end justify-center z-10 pb-24 text-center"
         >
-          <h2 className="text-4xl font-normal text-white drop-shadow-2xl">
+          <h2 className="text-4xl font-normal text-white" style={textStyle3D}>
             Data in every <br />
-            <span className="text-blue-500">Drop</span>
+            <span className="text-sky-500">Drop</span>
           </h2>
         </motion.div>
       </div>

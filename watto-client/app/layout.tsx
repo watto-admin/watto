@@ -1,21 +1,19 @@
 import type { Metadata } from "next";
-import { Fredoka, Oswald, Anta } from "next/font/google";
+import { Fredoka, Unbounded, Geist } from "next/font/google";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
-const oswald = Oswald({
-  variable: "--font-oswald",
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
   subsets: ["latin"],
-  weight: "400",
 });
 
-const anta = Anta({
-  variable: "--font-anta",
+const geist = Geist({
+  variable: "--font-geist",
   subsets: ["latin"],
-  weight: "400",
 });
 
 const fredoka = Fredoka({
@@ -37,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${oswald.variable} ${anta.variable} ${fredoka.variable} antialiased bg-black text-white`}
+        className={`${unbounded.variable} ${geist.variable} ${fredoka.variable} antialiased bg-black text-white`}
       >
         <SmoothScrolling>
           <Navbar />

@@ -20,10 +20,10 @@ const LandingInfoOne = () => {
           {/* Feature 1 */}
           <div className="group flex flex-col items-center md:items-end gap-4 max-w-xs">
             <Tag className="w-8 h-8 text-black" />
-            <div className="bg-sky-500 text-black rounded-full px-6 py-2 text-md font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               Brand Blind Spot
-            </div>
-            <p className="text-gray-100 leading-relaxed">
+            </h3>
+            <p className="text-gray-100 leading-relaxed text-xl">
               Once sold, the connection with your customer usually ends. Turn
               that passive product into an active channel.
             </p>
@@ -32,10 +32,10 @@ const LandingInfoOne = () => {
           {/* Feature 2 */}
           <div className="group flex flex-col items-center md:items-end gap-4 max-w-xs">
             <TrendingUp className="w-8 h-8 text-black" />
-            <div className="bg-sky-500 text-black rounded-full px-6 py-2 text-md font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               Chance to Upsell or Inform
-            </div>
-            <p className="text-gray-100 leading-relaxed">
+            </h3>
+            <p className="text-gray-100 leading-relaxed text-xl">
               Deliver targeted campaigns, sustainability stories, or promotions
               directly to the consumer&apos;s hand.
             </p>
@@ -44,10 +44,10 @@ const LandingInfoOne = () => {
           {/* Feature 3 */}
           <div className="group flex flex-col items-center md:items-end gap-4 max-w-xs">
             <Calendar className="w-8 h-8 text-black" />
-            <div className="bg-sky-500 text-black rounded-full px-6 py-2 text-md font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               Extended Shelf Life
-            </div>
-            <p className="text-gray-100 leading-relaxed">
+            </h3>
+            <p className="text-gray-100 leading-relaxed text-xl">
               Keep your brand relevant long after the initial purchase with
               dynamic, updatable digital content.
             </p>
@@ -76,10 +76,10 @@ const LandingInfoOne = () => {
           {/* Feature 4 */}
           <div className="group flex flex-col items-center md:items-start gap-4 max-w-xs">
             <Hand className="w-8 h-8 text-black" />
-            <div className="bg-sky-500 text-black rounded-full px-6 py-2 text-md font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               Tangible Interaction
-            </div>
-            <p className="text-gray-100 leading-relaxed">
+            </h3>
+            <p className="text-gray-100 leading-relaxed text-xl">
               Physical products create a unique touchpoint. Bridge the gap
               between the physical and digital worlds.
             </p>
@@ -88,10 +88,10 @@ const LandingInfoOne = () => {
           {/* Feature 5 */}
           <div className="group flex flex-col items-center md:items-start gap-4 max-w-xs">
             <QrCode className="w-8 h-8 text-black" />
-            <div className="bg-sky-500 text-black rounded-full px-6 py-2 text-md font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               No Data or Insights
-            </div>
-            <p className="text-gray-100 leading-relaxed">
+            </h3>
+            <p className="text-gray-100 leading-relaxed text-xl">
               Traditional packaging is silent. Gain valuable analytics on how,
               where, and when customers engage.
             </p>
@@ -100,10 +100,10 @@ const LandingInfoOne = () => {
           {/* Feature 6 */}
           <div className="group flex flex-col items-center md:items-start gap-4 max-w-xs">
             <Users className="w-8 h-8 text-black" />
-            <div className="bg-sky-500 text-black rounded-full px-6 py-2 text-md font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               No Competitive Advantage
-            </div>
-            <p className="text-gray-100 leading-relaxed">
+            </h3>
+            <p className="text-gray-100 leading-relaxed text-xl">
               Stand out on the shelf. Offer an experience that competitors with
               standard packaging can&apos;t match.
             </p>
