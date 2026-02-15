@@ -93,10 +93,7 @@ export default function LandingStatsInfo() {
 
         {/* Description */}
         <p className="text-xl md:text-2xl font-medium mb-10 opacity-90 ">
-          WATTO transforms a simple bottle of water into a powerful
-          direct-to-consumer advertising and branding platform we specialize in
-          "Hand-Held Advertising". By combining partner branding with advertiser
-          messaging,every bottle becomes a mini billboard.
+          Hand-Held Advertising. Every bottle, a mini-billboard.
         </p>
 
         {/* CTA Button */}

@@ -230,8 +230,8 @@ export default function ScrollImageSequence() {
             className="text-4xl md:text-6xl font-normal text-white"
             style={textStyle3D}
           >
-            Data in every <br />
-            <span className="text-sky-500">Drop</span>
+            Hydration that <br />
+            <span className="text-sky-500">Drives Impressions</span>
           </h2>
         </motion.div>
 
@@ -262,8 +262,8 @@ export default function ScrollImageSequence() {
           className="pointer-events-none absolute inset-0 flex md:hidden items-end justify-center z-10 pb-24 text-center"
         >
           <h2 className="text-4xl font-normal text-white" style={textStyle3D}>
-            Data in every <br />
-            <span className="text-sky-500">Drop</span>
+            Hydration that <br />
+            <span className="text-sky-500">Drives Impressions</span>
           </h2>
         </motion.div>
       </div>
