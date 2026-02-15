@@ -1,37 +1,40 @@
-import { z } from 'zod';
+import { z } from "zod";
 
-export const ContactFormTypeEnum = z.enum(['advertise', 'info', 'buy']);
+export const ContactFormSchema = z.object({
+  name: z
+    .string()
+    .trim()
+    .min(2, "Name must be at least 2 characters")
+    .max(100, "Name must be less than 100 characters")
+    // Allow letters, spaces, dots, hyphens, and apostrophes (for names like O'Connor)
+    .regex(/^[a-zA-Z\s.'-]+$/, "Name contains invalid characters"),
 
-export const BaseContactSchema = z.object({
-  name: z.string().min(2, "Name is required"),
-  email: z.string().email("Invalid email address"),
-  honeypot: z.string().optional(), // Spam protection field (should be empty)
+  email: z
+    .string()
+    .trim()
+    .toLowerCase()
+    .email("Invalid email address")
+    .max(255, "Email must be less than 255 characters"),
+
+  phone: z
+    .string()
+    .trim()
+    .min(10, "Phone number must be at least 10 characters")
+    .max(10, "Phone number must be less than 10 characters")
+    // Allow digits, spaces, plus signs, dashes, and parentheses
+    .regex(/^\d{10}$/, "Phone number contains invalid characters"),
+
+  topic: z.enum(["General Inquiry", "Press", "Careers", "Other"], {
+    errorMap: () => ({ message: "Please select a valid topic" }),
+  }),
+
+  message: z
+    .string()
+    .trim()
+    .min(10, "Message must be at least 10 characters")
+    .max(2000, "Message cannot exceed 2000 characters"), // Reasonable limit for a contact form
+
+  honeypot: z.string().max(0, "Spam detected").optional().or(z.literal("")),
 });
 
-export const AdvertiseSchema = BaseContactSchema.extend({
-  type: z.literal('advertise'),
-  company: z.string().min(1, "Company name is required"),
-  budget: z.string().min(1, "Budget selection is required"),
-  goals: z.string().min(10, "Please describe your goals in more detail"),
-});
-
-export const InfoSchema = BaseContactSchema.extend({
-  type: z.literal('info'),
-  topic: z.string().min(1, "Topic is required"),
-  message: z.string().min(10, "Message is too short"),
-});
-
-export const BuySchema = BaseContactSchema.extend({
-  type: z.literal('buy'),
-  quantity: z.string().min(1, "Quantity is required"),
-  shipping_country: z.string().min(2, "Shipping country is required"),
-  notes: z.string().optional(),
-});
-
-export const ContactSubmissionSchema = z.discriminatedUnion('type', [
-  AdvertiseSchema,
-  InfoSchema,
-  BuySchema,
-]);
-
-export type ContactSubmission = z.infer<typeof ContactSubmissionSchema>;
+export type ContactSubmission = z.infer<typeof ContactFormSchema>;
