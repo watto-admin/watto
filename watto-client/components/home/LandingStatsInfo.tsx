@@ -32,11 +32,12 @@ export default function LandingStatsInfo() {
                   transform: "scaleY(1.2)",
                   transformOrigin: "center",
                 }}
+                springOptions={{ stiffness: 35, damping: 20 }}
               />
               <span className="text-4xl md:text-6xl font-bold ml-1">Crore</span>
             </div>
             <p className="text-lg md:text-xl font-medium opacity-90 max-w-xs mx-auto uppercase">
-              bottles sold daily in India
+              bottles sold in India
             </p>
           </div>
 
@@ -57,6 +58,7 @@ export default function LandingStatsInfo() {
                   transform: "scaleY(1.2)",
                   transformOrigin: "center",
                 }}
+                springOptions={{ stiffness: 35, damping: 20 }}
               />
               <span className="text-4xl md:text-6xl font-bold ml-1">mins</span>
             </div>
@@ -82,6 +84,7 @@ export default function LandingStatsInfo() {
                   transform: "scaleY(1.2)",
                   transformOrigin: "center",
                 }}
+                springOptions={{ stiffness: 35, damping: 20 }}
               />
               <span className="text-4xl md:text-6xl font-bold ml-1">%</span>
             </div>

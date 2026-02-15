@@ -20,7 +20,7 @@ const LandingInfoOne = () => {
           {/* Feature 1 */}
           <div className="group flex flex-col items-center md:items-end gap-4 max-w-xs">
             <Tag className="w-8 h-8 text-black" />
-            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-lg font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               Clutter-Free Space
             </h3>
             <p className="text-gray-100 leading-relaxed text-xl">
@@ -32,7 +32,7 @@ const LandingInfoOne = () => {
           {/* Feature 2 */}
           <div className="group flex flex-col items-center md:items-end gap-4 max-w-xs">
             <TrendingUp className="w-8 h-8 text-black" />
-            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-lg font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               Cost-Effective
             </h3>
             <p className="text-gray-100 leading-relaxed text-xl">
@@ -44,7 +44,7 @@ const LandingInfoOne = () => {
           {/* Feature 3 */}
           <div className="group flex flex-col items-center md:items-end gap-4 max-w-xs">
             <Calendar className="w-8 h-8 text-black" />
-            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-lg font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               Positive Association
             </h3>
             <p className="text-gray-100 leading-relaxed text-xl">
@@ -75,7 +75,7 @@ const LandingInfoOne = () => {
           {/* Feature 4 */}
           <div className="group flex flex-col items-center md:items-start gap-4 max-w-xs">
             <Hand className="w-8 h-8 text-black" />
-            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-lg font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               Captive Attention
             </h3>
             <p className="text-gray-100 leading-relaxed text-xl">
@@ -87,7 +87,7 @@ const LandingInfoOne = () => {
           {/* Feature 5 */}
           <div className="group flex flex-col items-center md:items-start gap-4 max-w-xs">
             <QrCode className="w-8 h-8 text-black" />
-            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-lg font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               Extended Shelf Life
             </h3>
             <p className="text-gray-100 leading-relaxed text-xl">
@@ -99,7 +99,7 @@ const LandingInfoOne = () => {
           {/* Feature 6 */}
           <div className="group flex flex-col items-center md:items-start gap-4 max-w-xs">
             <Users className="w-8 h-8 text-black" />
-            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-xl font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
+            <h3 className="bg-sky-500 text-black rounded-full px-4 py-2 text-lg font-bold uppercase transition-transform duration-300 group-hover:scale-105 cursor-default">
               Data Driven Insights
             </h3>
             <p className="text-gray-100 leading-relaxed text-xl">

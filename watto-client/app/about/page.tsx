@@ -46,10 +46,10 @@ export default function AboutPage() {
             </p>
           </div>
           <p className="text-lg text-gray-500">
-            Founded with the mission to reduce plastic waste while providing
-            brands with a tangible connection to their audience. Our aluminum
-            bottles are 100% recyclable and reused by consumers, extending your
-            brand&apos;s reach far beyond a single impression.
+            WATTO transforms a simple bottle of water into a powerful
+            direct-to-consumer advertising and branding platform we specialize
+            in "Hand-Held Advertising". By combining partner branding with
+            advertiser messaging,every bottle becomes a mini billboard.
           </p>
         </div>
       </div>

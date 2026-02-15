@@ -4,7 +4,7 @@ import LightRays from "@/components/LightRays";
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen md:pt-32 pb-16 px-6 bg-black text-white flex flex-col items-center relative overflow-hidden">
+    <main className="min-h-screen md:pt-24 pb-16 px-6 bg-black text-white flex flex-col items-center relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
         <LightRays
           raysOrigin="top-center"
@@ -26,9 +26,15 @@ export default function ContactPage() {
         <h1 className="text-4xl md:text-6xl font-normal mb-8 pt-24 text-center">
           Get in Touch
         </h1>
+        <div className="bg-neutral-900/50 p-8 rounded-2xl border border-white/10 my-12">
+          <p className="text-2xl md:text-2xl italic text-white text-center">
+            &quot;Let&apos;s Talk — We&apos;re Just a Sip Away.&quot;
+          </p>
+        </div>
         <p className="text-center text-gray-400 mb-12 text-lg">
-          Ready to hydrate your brand? Reach out to us for rates and partnership
-          opportunities.
+          We&apos;re here to help you revolutionize your hydration
+          strategy.Whether you want Watto bottles at your location or advertise
+          on them. We'd love to hear from you.
         </p>
 
         <ContactFormSection />

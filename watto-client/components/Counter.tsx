@@ -38,6 +38,7 @@ interface DigitProps {
   height: number;
   digitStyle?: React.CSSProperties;
   isInView: boolean;
+  springOptions?: { stiffness?: number; damping?: number; mass?: number; duration?: number; bounce?: number };
 }
 
 interface NumberDigitProps {
@@ -46,15 +47,18 @@ interface NumberDigitProps {
   height: number;
   digitStyle?: React.CSSProperties;
   isInView: boolean;
+  springOptions?: { stiffness?: number; damping?: number; mass?: number; duration?: number; bounce?: number };
 }
 
-function NumberDigit({ place, value, height, digitStyle, isInView }: NumberDigitProps) {
+function NumberDigit({ place, value, height, digitStyle, isInView, springOptions }: NumberDigitProps) {
   const valueRoundedToPlace = Math.floor(value / place);
-  const animatedValue = useSpring(0);
+  const animatedValue = useSpring(0, springOptions);
 
   useEffect(() => {
     if (isInView) {
       animatedValue.set(valueRoundedToPlace);
+    } else {
+      animatedValue.jump(0);
     }
   }, [isInView, animatedValue, valueRoundedToPlace]);
 
@@ -74,7 +78,7 @@ function NumberDigit({ place, value, height, digitStyle, isInView }: NumberDigit
   );
 }
 
-function Digit({ place, value, height, digitStyle, isInView }: DigitProps) {
+function Digit({ place, value, height, digitStyle, isInView, springOptions }: DigitProps) {
   // Decimal point digit
   if (place === '.') {
     return (
@@ -88,7 +92,7 @@ function Digit({ place, value, height, digitStyle, isInView }: DigitProps) {
   }
 
   // Numeric digit
-  return <NumberDigit place={place} value={value} height={height} digitStyle={digitStyle} isInView={isInView} />;
+  return <NumberDigit place={place} value={value} height={height} digitStyle={digitStyle} isInView={isInView} springOptions={springOptions} />;
 }
 
 interface CounterProps {
@@ -115,6 +119,7 @@ interface CounterProps {
   gradientTo?: string;
   topGradientStyle?: React.CSSProperties;
   bottomGradientStyle?: React.CSSProperties;
+  springOptions?: { stiffness?: number; damping?: number; mass?: number; duration?: number; bounce?: number };
 }
 
 export default function Counter({
@@ -145,11 +150,12 @@ export default function Counter({
   gradientFrom = 'black',
   gradientTo = 'transparent',
   topGradientStyle,
-  bottomGradientStyle
+  bottomGradientStyle,
+  springOptions
 }: CounterProps) {
   const height = fontSize + padding;
   const containerRef = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(containerRef, { once: true, margin: "-100px" });
+  const isInView = useInView(containerRef, { once: false, margin: "-100px" });
 
   const defaultContainerStyle: React.CSSProperties = {
     position: 'relative',
@@ -192,7 +198,7 @@ export default function Counter({
     <span ref={containerRef} style={{ ...defaultContainerStyle, ...containerStyle }}>
       <span style={{ ...defaultCounterStyle, ...counterStyle }}>
         {places.map(place => (
-          <Digit key={place} place={place} value={value} height={height} digitStyle={digitStyle} isInView={isInView} />
+          <Digit key={place} place={place} value={value} height={height} digitStyle={digitStyle} isInView={isInView} springOptions={springOptions} />
         ))}
       </span>
       <span style={gradientContainerStyle}>

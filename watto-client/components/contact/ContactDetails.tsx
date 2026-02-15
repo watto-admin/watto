@@ -28,7 +28,7 @@ const ContactDetails = () => {
     },
   ];
   return (
-    <div className="w-full max-w-3xl mx-auto mt-6 flex flex-row gap-4 px-2 sm:px-0">
+    <div className="w-full max-w-3xl mx-auto mt-6 flex flex-col sm:flex-row gap-4 px-2 sm:px-0">
       {details.map((item) => (
         <a
           key={item.id}
