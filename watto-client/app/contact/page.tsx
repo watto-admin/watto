@@ -37,10 +37,10 @@ export default function ContactPage() {
         <div className="mt-16 text-center border-t border-white/10 pt-12">
           <p className="text-gray-500">Or email us directly at</p>
           <a
-            href="mailto:hello@watto.com"
+            href="mailto:info@watto.in"
             className="text-2xl font-medium hover:text-blue-500 transition-colors"
           >
-            hello@watto.com
+            info@watto.in
           </a>
         </div>
       </div>

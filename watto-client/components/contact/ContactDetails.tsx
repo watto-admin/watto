@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Phone, MapPin } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
 import SpotlightCard from "../SpotlightCard";
 
 const ContactDetails = () => {
@@ -8,16 +8,23 @@ const ContactDetails = () => {
     {
       id: "advertise",
       label: "Call us on",
-      value: "+91 99999 99999",
+      value: "+91 63661-39633",
       icon: Phone,
-      href: "tel:+919999999999",
+      href: "tel:+91 6366139633",
     },
+    // {
+    //   id: "info",
+    //   label: "Meet us at",
+    //   value: "123 Main Street, Anytown, India",
+    //   icon: MapPin,
+    //   href: "https://www.google.com/maps/search/?api=1&query=123+Main+Street,+Anytown,+India",
+    // },
     {
-      id: "info",
-      label: "Meet us at",
-      value: "123 Main Street, Anytown, India",
-      icon: MapPin,
-      href: "https://www.google.com/maps/search/?api=1&query=123+Main+Street,+Anytown,+India",
+      id: "hours",
+      label: "Business Hours",
+      value: "Mon-Fri: 9am - 6pm",
+      icon: Clock, // Changed from MapPin for better UX
+      href: "",
     },
   ];
   return (

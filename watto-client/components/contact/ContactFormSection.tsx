@@ -196,8 +196,13 @@ function InfoForm() {
         />
         <SelectField
           name="topic"
-          label="Topic"
-          options={["General Inquiry", "Press", "Careers", "Other"]}
+          label="Reason for Inquiry"
+          options={[
+            "Brand Promotion & Co-Branding",
+            "Retail & Wholesale Distribution",
+            "Strategic Partnerships",
+            "General Inquiry",
+          ]}
           error={state.errors?.topic}
           defaultValue={getValue("topic")}
         />

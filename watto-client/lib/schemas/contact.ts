@@ -19,14 +19,19 @@ export const ContactFormSchema = z.object({
   phone: z
     .string()
     .trim()
-    .min(10, "Phone number must be at least 10 characters")
-    .max(10, "Phone number must be less than 10 characters")
-    // Allow digits, spaces, plus signs, dashes, and parentheses
-    .regex(/^\d{10}$/, "Phone number contains invalid characters"),
+    .regex(/^\d{10}$/, "Phone number must be exactly 10 digits"),
 
-  topic: z.enum(["General Inquiry", "Press", "Careers", "Other"], {
-    errorMap: () => ({ message: "Please select a valid topic" }),
-  }),
+  topic: z.enum(
+    [
+      "Brand Promotion & Co-Branding",
+      "Retail & Wholesale Distribution",
+      "Strategic Partnerships",
+      "General Inquiry",
+    ],
+    {
+      error: "Please select a valid option",
+    },
+  ),
 
   message: z
     .string()
