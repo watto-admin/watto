@@ -1,5 +1,6 @@
 import CircularText from "@/components/CircularText";
 import LightRays from "@/components/LightRays";
+import ProcessSteps from "@/components/about/ProcessSteps";
 
 export default function AboutPage() {
   return (
@@ -21,7 +22,7 @@ export default function AboutPage() {
           saturation={1}
         />
       </div>
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <div className="relative flex items-center justify-center mb-12">
           <CircularText
             text="WATTO*WATTO*WATTO*"
@@ -45,13 +46,14 @@ export default function AboutPage() {
               hand.&quot;
             </p>
           </div>
-          <p className="text-lg text-gray-500">
+          <p className="text-lg text-gray-500 mb-16">
             WATTO transforms a simple bottle of water into a powerful
             direct-to-consumer advertising and branding platform we specialize
-            in "Hand-Held Advertising". By combining partner branding with
-            advertiser messaging,every bottle becomes a mini billboard.
+            in &quot;Hand-Held Advertising&quot;. By combining partner branding
+            with advertiser messaging,every bottle becomes a mini billboard.
           </p>
         </div>
+        <ProcessSteps />
       </div>
     </main>
   );

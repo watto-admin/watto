@@ -18,7 +18,7 @@ export default function Home() {
           <p className="text-gray-400 mb-12 text-xl">
             We&apos;re here to help you revolutionize your hydration
             strategy.Whether you want Watto bottles at your location or
-            advertise on them. We'd love to hear from you.
+            advertise on them. We&apos;d love to hear from you.
           </p>
         </div>
         <div className="w-full md:w-1/2">

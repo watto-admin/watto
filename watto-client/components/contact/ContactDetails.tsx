@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, Clock } from "lucide-react";
 import SpotlightCard from "../SpotlightCard";
 
 const ContactDetails = () => {

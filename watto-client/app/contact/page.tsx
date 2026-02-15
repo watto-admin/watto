@@ -34,7 +34,7 @@ export default function ContactPage() {
         <p className="text-center text-gray-400 mb-12 text-lg">
           We&apos;re here to help you revolutionize your hydration
           strategy.Whether you want Watto bottles at your location or advertise
-          on them. We'd love to hear from you.
+          on them. We&apos;d love to hear from you.
         </p>
 
         <ContactFormSection />
