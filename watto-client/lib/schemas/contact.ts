@@ -21,17 +21,9 @@ export const ContactFormSchema = z.object({
     .trim()
     .regex(/^\d{10}$/, "Phone number must be exactly 10 digits"),
 
-  topic: z.enum(
-    [
-      "Brand Promotion & Co-Branding",
-      "Retail & Wholesale Distribution",
-      "Strategic Partnerships",
-      "General Inquiry",
-    ],
-    {
-      error: "Please select a valid option",
-    },
-  ),
+  topic: z.enum(["Print Custom Bottles", "Advertise on Bottles"], {
+    error: "Please select a valid option",
+  }),
 
   message: z
     .string()
