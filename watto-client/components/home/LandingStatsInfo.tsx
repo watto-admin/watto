@@ -34,7 +34,9 @@ export default function LandingStatsInfo() {
                 }}
                 springOptions={{ stiffness: 35, damping: 20 }}
               />
-              <span className="text-4xl md:text-6xl font-bold ml-1">Crore</span>
+              <span className="text-4xl md:text-6xl font-bold ml-1">
+                Million
+              </span>
             </div>
             <p className="text-lg md:text-xl font-medium opacity-90 max-w-xs mx-auto uppercase">
               bottles sold in India
